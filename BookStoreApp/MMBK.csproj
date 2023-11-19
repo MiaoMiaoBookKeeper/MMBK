@@ -9,8 +9,8 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\BookStoreApp.Data\BookStoreApp.Data.csproj" />
-    <ProjectReference Include="..\BookStoreApp.Service\BookStoreApp.Service.csproj" />
+    <ProjectReference Include="..\BookStoreApp.Data\MMBK.Data.csproj" />
+    <ProjectReference Include="..\BookStoreApp.Service\MMBK.Service.csproj" />
   </ItemGroup>
 
 
