@@ -16,13 +16,13 @@ namespace MMBK.Controllers
     }
 
     [HttpGet()]
-    public async Task<IActionResult> Get(int id)
+    public async Task<IActionResult> Get()
     {
       var result = await _demoService.GetAsync();
       return Ok(result);
     }
 
-    [HttpPost("{id}")]
+    [HttpGet("{id}")]
     public async Task<IActionResult> Add(int id)
     {
       var result = await _demoService.AddAsync(id);

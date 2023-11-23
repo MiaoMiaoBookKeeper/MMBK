@@ -36,6 +36,14 @@ namespace MMBK
          //   services.AddScoped<IBookRepository, BookRepository>();
          //   services.AddScoped<IDbMigrator, DbMigrator>();
             services.AddControllers();
+
+          services.AddCors(options =>
+          {
+            options.AddPolicy("AllowSpecificOrigin",
+                builder => builder.WithOrigins("http://localhost:4200")
+                                  .AllowAnyHeader()
+                                  .AllowAnyMethod());
+          });
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -51,6 +59,8 @@ namespace MMBK
             app.UseRouting();
 
             app.UseAuthorization();
+
+            app.UseCors("AllowSpecificOrigin"); // Apply the CORS policy
 
             app.UseEndpoints(endpoints =>
             {

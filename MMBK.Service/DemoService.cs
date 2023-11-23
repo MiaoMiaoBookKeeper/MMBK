@@ -17,19 +17,16 @@ namespace MMBK.Service
 
         public async Task<int> GetAsync()
         {
-            _ = Task.CompletedTask;
-            return 0;
+            return 19;
         }
 
         public async Task<int> AddAsync(int input)
         {
-            _ = Task.CompletedTask;
-            return input++;
+            return (input + 1);
         }
 
         public async Task RunAsync()
         {
-            _ = Task.CompletedTask;
             Console.WriteLine("Demo Runs....");
             
         }
