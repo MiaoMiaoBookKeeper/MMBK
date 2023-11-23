@@ -1,0 +1,39 @@
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.navbar-nav-left {
+    display: flex;
+    align-items: center;
+    margin-right: 20px; /* Space between left and right sections */
+}
+
+.navbar-nav-middle form {
+    display: flex;
+    align-items: center; /* Align form elements horizontally */
+}
+
+.navbar-nav-middle {
+    display: flex;
+    justify-content: center;
+    flex-grow: 1;
+}
+
+.navbar-nav-right {
+    display: flex;
+    align-items: center;
+}
+
+@media (max-width: 991px) {
+    .navbar-nav-left, .navbar-nav-middle, .navbar-nav-right {
+        flex-basis: 100%;
+        justify-content: center;
+        margin-top: 10px;
+    }
+
+    .navbar-nav-left {
+        margin-right: 0; /* Remove margin in smaller screens */
+    }
+}
