@@ -8,5 +8,6 @@ namespace MMBK.Core.Contract
     public interface IDbMigrator
     {
         Task RunAsync();
+
     }
 }

@@ -20,7 +20,7 @@ namespace MMBK
             using (var scope = host.Services.CreateScope())
             {
                 var services = scope.ServiceProvider;
-                var startup = services.GetRequiredService<IDbMigrator>();
+                var startup = services.GetRequiredService<IDemoService>(); // <- IDbMigrator
                 startup.RunAsync().Wait();
             }
 

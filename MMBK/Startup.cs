@@ -29,11 +29,12 @@ namespace MMBK
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
-            services.AddDbContext<BookDbContext>(options =>
-                    options.UseSqlServer(Configuration.GetConnectionString("DefaultConnection")));
-            services.AddScoped<IBookRepository, BookRepository>();
-            services.AddScoped<IBookService, BookService>();
-            services.AddScoped<IDbMigrator, DbMigrator>();
+            services.AddScoped<IDemoService, DemoService>();
+         //   services.AddScoped<IBookService, BookService>();
+         //   services.AddDbContext<BookDbContext>(options =>
+         //           options.UseSqlServer(Configuration.GetConnectionString("DefaultConnection")));
+         //   services.AddScoped<IBookRepository, BookRepository>();
+         //   services.AddScoped<IDbMigrator, DbMigrator>();
             services.AddControllers();
         }
 
