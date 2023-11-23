@@ -1,16 +1,16 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { McComponent } from './mc.component';
+import { FlashComponent } from './flash.component';
 
-describe('McComponent', () => {
-  let component: McComponent;
-  let fixture: ComponentFixture<McComponent>;
+describe('FlashComponent', () => {
+  let component: FlashComponent;
+  let fixture: ComponentFixture<FlashComponent>;
 
   beforeEach(() => {
     TestBed.configureTestingModule({
-      declarations: [McComponent]
+      declarations: [FlashComponent]
     });
-    fixture = TestBed.createComponent(McComponent);
+    fixture = TestBed.createComponent(FlashComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

@@ -1,18 +1,19 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule} from '@angular/router';
 import { RtComponent } from './rt.component';
-import { HomeComponent } from './home/home.component';
-import { DashboardComponent } from '../dashboard/dashboard.component';
+import { FlashComponent } from './flash/flash.component';
+
+import { DashboardComponent } from './dashboard/dashboard.component';
 
 const routes: Routes = [
   {
     path: '',
     component: RtComponent,
     children: [
-      { path: '', redirectTo: 'home', pathMatch: 'full' },
-      { path: 'home',
+      { path: '', redirectTo: 'flash', pathMatch: 'full' },
+      { path: 'flash',
         children: [
-          {path:'',component: HomeComponent},
+          {path:'',component: FlashComponent},
           {path:'dashboard',component: DashboardComponent}
         ]
       }
